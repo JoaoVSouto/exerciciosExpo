@@ -1,27 +1,35 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Hello World!</Text>
-      </View>
-    );
-  }
+
+// FUNCTIONAL COMPONENT
+export default () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.f40}>App!</Text>
+    </View>
+  );
 }
+
+
+// CLASS BASED COMPONENT
+// class App extends Component {
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <Text style={styles.f40}>App!</Text>
+//       </View>
+//     );
+//   }
+// }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-    alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  text: {
-    fontSize: 40,
-    color: 'blue',
-    fontWeight: 'bold',
-    textDecorationLine: 'underline'
+  f40: {
+    fontSize: 40
   }
 });
