@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
 import Simples from './components/Simples';
+import OddOrEven from './components/OddOrEven';
 
 // FUNCTIONAL COMPONENT
 export default () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.f40}>App!</Text>
+      {/* <Text style={styles.f40}>App!</Text> */}
       <Simples text='Flexible text' />
+      <OddOrEven number={25}/>
     </View>
   );
 }
