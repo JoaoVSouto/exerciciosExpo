@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 
 import Simples from './components/Simples';
 import OddOrEven from './components/OddOrEven';
+import Reverse, { Lottery } from './components/Multi';
 
 // FUNCTIONAL COMPONENT
 export default () => {
@@ -11,6 +12,8 @@ export default () => {
       {/* <Text style={styles.f40}>App!</Text> */}
       <Simples text='Flexible text' />
       <OddOrEven number={25}/>
+      <Reverse text='React Native!' />
+      <Lottery />
     </View>
   );
 }
