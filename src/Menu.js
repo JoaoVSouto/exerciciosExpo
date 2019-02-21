@@ -5,8 +5,12 @@ import Simples from './components/Simples';
 import OddOrEven from './components/OddOrEven';
 import Reverse, { Lottery } from './components/Multi';
 import Counter from './components/Counter';
+import Platforms from './components/Platforms';
 
 export default createDrawerNavigator({
+    Platforms: {
+        screen: Platforms
+    },
     Counter: {
         screen: () => <Counter startNumber={100} />
     },
