@@ -6,8 +6,12 @@ import OddOrEven from './components/OddOrEven';
 import Reverse, { Lottery } from './components/Multi';
 import Counter from './components/Counter';
 import Platforms from './components/Platforms';
+import PropsValidate from './components/PropsValidate';
 
 export default createDrawerNavigator({
+    PropsValidate: {
+        screen: () => <PropsValidate year={19} />
+    },
     Platforms: {
         screen: Platforms
     },
