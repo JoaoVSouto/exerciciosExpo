@@ -7,10 +7,19 @@ import Reverse, { Lottery } from './components/Multi';
 import Counter from './components/Counter';
 import Platforms from './components/Platforms';
 import PropsValidate from './components/PropsValidate';
+import Event from './components/Event';
+import Grandfather from './components/DirectCommunication';
 
 export default createDrawerNavigator({
+    Grandfather: {
+        screen: () => <Grandfather name='John' surname='Johnson' />
+    },
+    Event: {
+        screen: Event
+    },
     PropsValidate: {
-        screen: () => <PropsValidate year={19} />
+        screen: () => <PropsValidate year={19} />,
+        navigationOptions: { title: 'Props Validation' }
     },
     Platforms: {
         screen: Platforms
