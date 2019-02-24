@@ -5,3 +5,11 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+calculator/node_modules/**/*
+calculator/.expo/*
+calculator/npm-debug.*
+calculator/*.jks
+calculator/*.p12
+calculator/*.key
+calculator/*.mobileprovision
+
