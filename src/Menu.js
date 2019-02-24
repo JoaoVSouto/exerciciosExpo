@@ -10,8 +10,17 @@ import PropsValidate from './components/PropsValidate';
 import Event from './components/Event';
 import Grandfather from './components/DirectCommunication';
 import SyncedText from './components/IndirectCommunication';
+import FlexList from './components/FlexList';
+import Flex from './components/Flex';
 
 export default createDrawerNavigator({
+    Flex: {
+        screen: Flex
+    },
+    FlexList: {
+        screen: FlexList,
+        navigationOptions: { title: 'Flex List' }
+    },
     SyncedText: {
         screen: SyncedText,
         navigationOptions: { title: 'Indirect Communication' }
