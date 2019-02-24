@@ -9,10 +9,16 @@ import Platforms from './components/Platforms';
 import PropsValidate from './components/PropsValidate';
 import Event from './components/Event';
 import Grandfather from './components/DirectCommunication';
+import SyncedText from './components/IndirectCommunication';
 
 export default createDrawerNavigator({
+    SyncedText: {
+        screen: SyncedText,
+        navigationOptions: { title: 'Indirect Communication' }
+    },
     Grandfather: {
-        screen: () => <Grandfather name='John' surname='Johnson' />
+        screen: () => <Grandfather name='John' surname='Johnson' />,
+        navigationOptions: { title: 'Direct Communication' }
     },
     Event: {
         screen: Event
