@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "calculator",
-    "slug": "calculator",
+    "name": "Calculator",
+    "slug": "simple-calculator",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
