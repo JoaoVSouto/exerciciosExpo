@@ -12,4 +12,11 @@ calculator/*.jks
 calculator/*.p12
 calculator/*.key
 calculator/*.mobileprovision
+mines/node_modules/**/*
+mines/.expo/*
+mines/npm-debug.*
+mines/*.jks
+mines/*.p12
+mines/*.key
+mines/*.mobileprovision
 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Calculator",
-    "slug": "simple-calculator",
+    "name": "mines",
+    "slug": "mines",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -22,8 +22,8 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "android": {
-      "package": "com.jao.calculator"
+    "ios": {
+      "supportsTablet": true
     }
   }
 }
