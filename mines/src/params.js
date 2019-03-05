@@ -7,7 +7,7 @@ const params = {
     headerRatio: 0.15, // Proporção do painel superior na tela
     difficultLevel: 0.1,
     getColumnsAmount() {
-        const width = Dimensions.get('window').width; // tentar trocar o window pra screen dps
+        const width = Dimensions.get('window').width;
         return Math.floor(width / this.blockSize);
     },
     getRowsAmount() {
