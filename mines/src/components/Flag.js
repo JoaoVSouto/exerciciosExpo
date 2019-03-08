@@ -15,7 +15,7 @@ export default props => {
 const styles = StyleSheet.create({
     container: {
         marginTop: 3,
-        marginLeft: 2 // cuidado com isso dps
+        marginLeft: 2
     },
     flagpole: {
         position: 'absolute',
