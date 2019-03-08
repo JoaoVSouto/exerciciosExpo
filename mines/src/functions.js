@@ -63,10 +63,8 @@ const getNeighbors = (board, row, column) => {
     return neighbors;
 }
 
-const safeNeighborhood = (board, row, column) => {
-    const safes = (result, neighbor) => result && !neighbor.mined; // tentar trocar p every dps
-    return getNeighbors(board, row, column).reduce(safes, true);
-}
+const safeNeighborhood = (board, row, column) => 
+    getNeighbors(board, row, column).every(neighbor => !neighbor.mined);
 
 const openField = (board, row, column) => {
     const field = board[row][column];
