@@ -13,7 +13,7 @@ export default props => {
             </View>
             <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackgroundBorderless()} onPress={props.onNewGame}>
                 <View style={styles.button}>
-                    <Text>Novo Jogo</Text>
+                    <Text style={styles.buttonLabel}>Novo Jogo</Text>
                 </View>
             </TouchableNativeFeedback>
         </View>
@@ -45,13 +45,13 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     button: {
-        backgroundColor: '#999',
+        backgroundColor: '#4CAF50',
         padding: 8,
         borderRadius: 12
     },
     buttonLabel: {
         fontSize: 20,
-        color: '#DDD',
+        color: 'white',
         fontWeight: 'bold'
     }
 });

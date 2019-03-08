@@ -3,6 +3,7 @@ import { StyleSheet, View, Alert, Vibration } from 'react-native';
 import params from './src/params';
 import MineField from './src/components/MineField';
 import Header from './src/components/Header';
+import LevelSelection from './src/screens/LevelSelection';
 import {
   createMinedBoard,
   cloneBoard,
@@ -33,7 +34,8 @@ export default class App extends React.Component {
     return {
       board: createMinedBoard(rows, cols, this.minesAmount()),
       won: false,
-      lost: false
+      lost: false,
+      showLevelSelection: false
     };
   }
 
@@ -72,11 +74,18 @@ export default class App extends React.Component {
     this.setState(this.createState());
   }
 
+  onLevelSelected = level => {
+    params.difficultLevel = level
+    this.onNewGame();
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        <LevelSelection isVisible={this.state.showLevelSelection} onLevelSelected={this.onLevelSelected} 
+          onCancel={() => this.setState({ showLevelSelection: false })} />
         <Header flagsLeft={this.minesAmount() - flagsUsed(this.state.board)} 
-          onNewGame={this.onNewGame} />
+          onNewGame={this.onNewGame} onFlagPress={() => this.setState({ showLevelSelection: true })} />
         <View style={styles.board}>
           <MineField board={this.state.board} onOpenField={this.onOpenField} 
             onSelectField={this.onSelectField} />
