@@ -56,5 +56,4 @@ buck-out/
 *.jsbundle
 
 # Fonts
-assets/fonts/
 android/app/src/main/assets/fonts/
