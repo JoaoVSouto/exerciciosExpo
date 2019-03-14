@@ -28,15 +28,15 @@ export default props => {
 
     const leftContent = (
         <View style={styles.exclude}>
-            <Icon name='trash' size={20} color='#FFF' />
+            <Icon name='trash' size={20} color='red' />
             <Text style={styles.excludeText}>Excluir</Text>
         </View>
     );
 
     const rightContent = [
-        <TouchableOpacity style={[styles.exclude, { justifyContent: 'flex-start', paddingLeft: 20 }]} 
+        <TouchableOpacity style={[styles.exclude, { justifyContent: 'flex-start', paddingLeft: 20, borderLeftWidth: 1, }]} 
             onPress={() => props.onDelete(props.id)}>
-            <Icon name='trash' size={30} color='#FFF' />
+            <Icon name='trash' size={30} color='red' />
         </TouchableOpacity>
     ];
 
@@ -97,14 +97,17 @@ const styles = StyleSheet.create({
     },
     exclude: {
         flex: 1,
-        backgroundColor: 'red',
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderRightWidth: 1,
+        borderColor: '#CCC',
+        backgroundColor: '#EEE'
     },
     excludeText: {
         fontFamily: commonStyles.fontFamily,
-        color: '#FFF',
+        color: 'red',
         fontSize: 20,
         margin: 10
     }

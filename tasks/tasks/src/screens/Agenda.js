@@ -6,7 +6,8 @@ import {
     ImageBackground,
     FlatList,
     TouchableOpacity,
-    Platform
+    Platform,
+    AsyncStorage
 } from 'react-native';
 import moment from 'moment';
 import 'moment/locale/pt-br';
