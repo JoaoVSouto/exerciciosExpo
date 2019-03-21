@@ -52,14 +52,18 @@ export default class Agenda extends Component {
             visibleTasks = this.state.tasks.filter(pending);
         }
         this.setState({ visibleTasks });
+
+        AsyncStorage.setItem('tasks', JSON.stringify(this.state.tasks));
     }
 
     toggleFilter = () => {
         this.setState({ showDoneTasks: !this.state.showDoneTasks }, this.filterTasks);
     }
 
-    componentDidMount = () => {
-        this.filterTasks();
+    componentDidMount = async () => {
+        const data = await AsyncStorage.getItem('tasks');
+        const tasks = JSON.parse(data) || [];
+        this.setState({ tasks }, this.filterTasks);
     }
 
     toggleTask = id => {
