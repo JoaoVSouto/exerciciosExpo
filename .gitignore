@@ -20,3 +20,4 @@ mines/*.p12
 mines/*.key
 mines/*.mobileprovision
 node_modules
+.env
